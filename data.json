@@ -1,0 +1,300 @@
+{
+  "profile": {
+    "name": "Sergio Carvajal Appelgren",
+    "title": "Network & Systems Administrator | Infrastructure Specialist",
+    "location": "Kitchener, Ontario, Canada",
+    "email": "sergio.carvajal.a@gmail.com",
+    "phone": "+1 (437) 660-9353",
+    "linkedin": "https://linkedin.com/in/sergio-carvajal-a-79209829b",
+    "github": "https://github.com/yourusername",
+    "about": "Network and Systems Administrator with 10+ years of experience designing, deploying, and optimizing secure enterprise IT infrastructures. Specialized in enterprise networking, Active Directory management, virtualization, and infrastructure modernization. Proven track record maintaining 98% network uptime across 2,000+ users in multi-site education and healthcare environments. Currently completing IT Infrastructure studies at Conestoga College while consulting on complex infrastructure projects."
+  },
+  "skills": {
+    "Networking": [
+      "TCP/IP Architecture",
+      "LAN/WAN Design",
+      "VLAN Segmentation",
+      "Routing & Switching",
+      "VPN (Site-to-Site, Remote Access)",
+      "Firewall Configuration & Management",
+      "Wireless Networks (WiFi 6)",
+      "Network Monitoring & Analytics",
+      "DNS/DHCP Management",
+      "ISP Coordination"
+    ],
+    "Systems Administration": [
+      "Windows Server (2016, 2019, 2022)",
+      "Active Directory & Group Policy",
+      "Entra ID (Azure AD)",
+      "Microsoft 365 (Exchange, Teams, OneDrive)",
+      "Google Workspace Administration",
+      "User & Resource Management",
+      "Security Hardening"
+    ],
+    "Virtualization & Cloud": [
+      "VMware vSphere",
+      "Proxmox VE",
+      "Server Deployment & Lifecycle",
+      "Infrastructure Upgrades",
+      "Disaster Recovery Planning",
+      "Backup Solutions"
+    ],
+    "Linux Administration": [
+      "Debian/Ubuntu Server",
+      "System Hardening",
+      "Bash Scripting Fundamentals",
+      "Service Management",
+      "File System Administration"
+    ],
+    "Security & Operations": [
+      "Identity & Access Management",
+      "MFA Implementation",
+      "Endpoint Policy Enforcement",
+      "Incident Response",
+      "Change Management",
+      "Documentation Best Practices"
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "role": "IT Consultant – Network and Infrastructure",
+      "company": "Web36.cl",
+      "location": "Remote",
+      "startDate": "August 2023",
+      "endDate": "Present",
+      "description": "Designing and deploying secure network infrastructures for multiple clients across diverse environments.",
+      "highlights": [
+        "Designed and deployed secure network infrastructures for multiple clients",
+        "Configured routing, VPNs, firewalls, wireless networks, and VLAN segmentation",
+        "Administered Linux servers (Debian/Ubuntu) with system hardening",
+        "Implemented and managed virtualized environments using Proxmox VE",
+        "Delivered Tier-2 technical support for networking and infrastructure",
+        "Provided infrastructure documentation and technical consulting"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "IT Support Coordinator",
+      "company": "Corporación de Desarrollo Social de Providencia",
+      "location": "Santiago, Chile",
+      "startDate": "June 2022",
+      "endDate": "July 2023",
+      "description": "Led IT infrastructure operations across 20+ education and healthcare facilities.",
+      "highlights": [
+        "Led IT infrastructure operations across 20+ facilities",
+        "Administered Microsoft 365 and Google Workspace Enterprise",
+        "Oversaw network upgrades improving service reliability by 15%",
+        "Managed vendor relationships and infrastructure budgets",
+        "Implemented IT policies strengthening security posture"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Senior Infrastructure & Network Specialist",
+      "company": "Corporación de Desarrollo Social de Providencia",
+      "location": "Santiago, Chile",
+      "startDate": "2012",
+      "endDate": "2022",
+      "description": "Managed enterprise LAN/WLAN infrastructure across 40+ facilities supporting 2,000+ users.",
+      "highlights": [
+        "Managed enterprise LAN/WLAN infrastructure across 40+ facilities",
+        "Administered Windows Server, Active Directory, DNS/DHCP, VPN",
+        "Reduced downtime by 20% through proactive monitoring",
+        "Supported VMware vSphere in lab and production systems",
+        "Implemented backup and disaster recovery procedures"
+      ]
+    },
+    {
+      "id": 4,
+      "role": "IT Support Technician",
+      "company": "Corporación de Desarrollo Social de Providencia",
+      "location": "Santiago, Chile",
+      "startDate": "2002",
+      "endDate": "2012",
+      "description": "Technical support for networked environments and endpoint systems.",
+      "highlights": [
+        "Provided technical support for networked environments",
+        "Assisted in server maintenance and network troubleshooting",
+        "Supported email systems and user account management",
+        "Hardware lifecycle management"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Enterprise Multi-Site Network Infrastructure",
+      "category": "Network Design",
+      "description": "Designed and deployed a secure, scalable network infrastructure supporting 2,000+ users across 40+ facilities in education and healthcare sectors.",
+      "technologies": ["Routing", "Switching", "VLAN Segmentation", "VPN", "Firewall", "DNS/DHCP"],
+      "achievements": [
+        "Maintained 98% network uptime",
+        "Reduced network-related downtime by 20%",
+        "Implemented automated monitoring and alerting",
+        "Documented all infrastructure for disaster recovery"
+      ],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Active Directory & Identity Management",
+      "category": "Systems Administration",
+      "description": "Implemented comprehensive Active Directory infrastructure with Group Policy management, user provisioning, and security policies across enterprise environment.",
+      "technologies": ["Windows Server", "Active Directory", "Group Policy", "Entra ID", "MFA"],
+      "achievements": [
+        "Streamlined user provisioning reducing onboarding time by 30%",
+        "Implemented MFA across all enterprise accounts",
+        "Created comprehensive AD documentation",
+        "Automated password policies and compliance reporting"
+      ],
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Virtualization Infrastructure Modernization",
+      "category": "Infrastructure",
+      "description": "Upgraded and optimized virtualization environment using VMware vSphere and Proxmox VE, improving performance and reducing infrastructure costs.",
+      "technologies": ["VMware vSphere", "Proxmox VE", "Server Deployment", "Resource Optimization"],
+      "achievements": [
+        "Migrated 50+ VMs with zero downtime",
+        "Reduced infrastructure costs by 25%",
+        "Implemented automated backup solutions",
+        "Created disaster recovery procedures"
+      ],
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Wireless Network Deployment",
+      "category": "Network Design",
+      "description": "Designed and deployed enterprise WiFi infrastructure across multiple sites with security hardening and performance optimization.",
+      "technologies": ["WiFi 6", "WLAN", "Network Security", "Ubiquiti", "Access Points"],
+      "achievements": [
+        "Achieved >95% coverage across all facilities",
+        "Implemented WPA3 security protocols",
+        "Optimized roaming between access points",
+        "Created wireless security policies"
+      ],
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Linux Server Administration",
+      "category": "Systems Administration",
+      "description": "Administration and hardening of Linux servers (Debian/Ubuntu) for production environments with focus on security and stability.",
+      "technologies": ["Linux", "Debian", "Ubuntu", "Bash", "System Hardening", "Security"],
+      "achievements": [
+        "Deployed and maintained production Linux servers",
+        "Implemented system hardening protocols",
+        "Created automated deployment scripts",
+        "Managed system updates and security patches"
+      ],
+      "featured": false
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "title": "Best Practices for Network Segmentation",
+      "excerpt": "Exploring VLAN segmentation strategies to improve network security and performance in enterprise environments.",
+      "content": "Network segmentation is critical for enterprise security. VLANs allow you to logically separate traffic, enforce security policies, and improve performance. Key practices include: isolating guest networks, separating IoT devices, protecting sensitive data areas, and implementing inter-VLAN routing with firewalls. Proper segmentation reduces attack surface and simplifies troubleshooting.",
+      "date": "2024-01-15",
+      "category": "Networking",
+      "readTime": "5 min"
+    },
+    {
+      "id": 2,
+      "title": "Active Directory: Security Hardening Checklist",
+      "excerpt": "Essential security configurations for protecting your Active Directory infrastructure from common threats.",
+      "content": "Active Directory is the heart of Windows enterprise infrastructure. Proper hardening is essential. Key recommendations: enforce strong password policies, implement MFA for privileged accounts, restrict Domain Admin group membership, enable audit logging, implement Kerberos hardening, keep AD servers patched, and regularly review access permissions. Consider implementing Entra ID for hybrid security.",
+      "date": "2024-01-10",
+      "category": "Systems Administration",
+      "readTime": "8 min"
+    },
+    {
+      "id": 3,
+      "title": "Disaster Recovery Planning: A Practical Guide",
+      "excerpt": "Implementing effective backup and recovery procedures to ensure business continuity.",
+      "content": "Disaster recovery requires proper planning and testing. Start with a comprehensive backup strategy: identify critical systems, implement 3-2-1 backup rule (3 copies, 2 different media, 1 offsite), test recovery procedures regularly, document everything, and establish clear RPO/RTO objectives. Automated backups reduce human error. Cloud backup solutions provide geographic redundancy.",
+      "date": "2024-01-05",
+      "category": "Infrastructure",
+      "readTime": "7 min"
+    },
+    {
+      "id": 4,
+      "title": "VPN Configuration for Remote Workforce",
+      "excerpt": "Setting up secure site-to-site and remote access VPN for modern distributed teams.",
+      "content": "Modern workforce requires secure VPN solutions. Site-to-site VPNs connect branch offices securely. Remote access VPNs support work-from-home scenarios. Key considerations: choose appropriate encryption (IPSec vs OpenVPN), implement MFA, monitor VPN logs, optimize bandwidth, and test failover scenarios. Consider VPN appliances with threat prevention capabilities.",
+      "date": "2023-12-28",
+      "category": "Networking",
+      "readTime": "6 min"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "author": "Juan García",
+      "position": "IT Director, Education Institution",
+      "text": "Sergio's expertise in network infrastructure has been invaluable. He designed our multi-site network that now supports 2,000+ users with exceptional reliability.",
+      "company": "Corporación de Desarrollo Social",
+      "date": "2023-06-15"
+    },
+    {
+      "id": 2,
+      "author": "María López",
+      "position": "Operations Manager, Healthcare Facility",
+      "text": "His attention to detail and documentation standards have transformed our IT operations. Network maintenance is now proactive rather than reactive.",
+      "company": "Healthcare Network",
+      "date": "2023-05-20"
+    },
+    {
+      "id": 3,
+      "author": "Carlos Mendez",
+      "position": "Business Owner",
+      "text": "Professional, reliable, and always willing to explain technical concepts clearly. Recommended for any infrastructure consulting needs.",
+      "company": "Web36.cl",
+      "date": "2024-01-10"
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Ubuntu Linux Professional Certificate",
+      "issuer": "Canonical",
+      "date": "2025",
+      "credentialUrl": "#"
+    },
+    {
+      "id": 2,
+      "name": "MikroTik Certified Network Associate (MTCNA)",
+      "issuer": "MikroTik",
+      "date": "2022",
+      "credentialUrl": "#"
+    },
+    {
+      "id": 3,
+      "name": "Ubiquiti Enterprise Wireless Admin (UEWA)",
+      "issuer": "Ubiquiti Inc.",
+      "date": "2023",
+      "credentialUrl": "#"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Computer Systems Technician – IT Infrastructure and Services",
+      "school": "Conestoga College",
+      "location": "Kitchener, Ontario",
+      "startDate": "August",
+      "endDate": "2025"
+    },
+    {
+      "id": 2,
+      "degree": "System Analyst",
+      "school": "Universidad Tecnológica de Chile (INACAP)",
+      "location": "Santiago, Chile",
+      "date": "2012"
+    }
+  ]
+}

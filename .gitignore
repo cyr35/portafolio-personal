@@ -1,0 +1,23 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (si algún día usas npm)
+node_modules/
+package-lock.json
+
+# Archivos locales
+.env
+.env.local
+
+# Backups
+*.bak
+backup/

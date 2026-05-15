@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Sergio Carvajal - Network & Systems Administrator | Infrastructure Specialist">
+    <meta name="keywords" content="Network Administrator, Systems Administrator, Infrastructure, IT">
+    <meta name="author" content="Sergio Carvajal Appelgren">
+    <title>Sergio Carvajal - Network & Systems Administrator</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #1e293b;
+            --accent-color: #0ea5e9;
+            --accent-hover: #0284c7;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-light: #ffffff;
+            --border-color: #e2e8f0;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-white);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            background-color: transparent;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: var(--text-light);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        section.light-bg {
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li:before {
+            content: "▸";
+            color: var(--accent-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-color);
+            transform: translateY(-6px);
+        }
+
+        .project-card.featured {
+            border: 2px solid var(--accent-color);
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(14, 165, 233, 0.02) 100%);
+        }
+
+        .project-category {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 0.25rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background-color: var(--bg-light);
+            color: var(--accent-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .achievements {
+            background-color: var(--bg-light);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .achievements h4 {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .achievements ul {
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .achievements li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .achievements li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .experience-item {
+            padding: 2rem;
+            border-left: 3px solid var(--border-color);
+            margin-bottom: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            border-left-color: var(--accent-color);
+            background-color: var(--bg-light);
+        }
+
+        .experience-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-meta {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .experience-period {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-highlights {
+            list-style: none;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .experience-highlights li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .experience-highlights li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-color);
+            transform: translateY(-4px);
+        }
+
+        .blog-date {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            padding: 0.25rem 0.7rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .blog-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            flex-grow: 1;
+        }
+
+        .blog-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .blog-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+
+        .blog-modal-content {
+            background-color: var(--bg-white);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .blog-close {
+            color: var(--text-secondary);
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .blog-close:hover {
+            color: var(--primary-color);
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-color);
+        }
+
+        .testimonial-text {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-position {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-company {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .certification-card {
+            background: var(--bg-white);
+            border: 2px solid var(--accent-color);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .certification-card:hover {
+            box-shadow: 0 6px 16px rgba(14, 165, 233, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .certification-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .certification-issuer {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .certification-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 1.5rem 0;
+        }
+
+        .footer-credit {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons .btn {
+                width: 200px;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Hidden */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">SC</a>
+            <ul class="nav-links">
+                <li><a onclick="scrollToSection('about')">Acerca de</a></li>
+                <li><a onclick="scrollToSection('skills')">Skills</a></li>
+                <li><a onclick="scrollToSection('projects')">Proyectos</a></li>
+                <li><a onclick="scrollToSection('experience')">Experiencia</a></li>
+                <li><a onclick="scrollToSection('blog')">Blog</a></li>
+                <li><a onclick="scrollToSection('testimonials')">Testimonios</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="heroName"></h1>
+            <p class="subtitle" id="heroTitle"></p>
+            <p id="heroDescription"></p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contact" class="btn btn-secondary">Contacta</a>
+            </div>
+            <div class="contact-info">
+                <span>📍 <span id="heroLocation"></span></span>
+                <a href="" id="heroEmail">📧 Email</a>
+                <a href="" id="heroLinkedin" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="light-bg">
+        <div class="container">
+            <h2 class="section-title">Acerca de Mí</h2>
+            <div class="about-content" id="aboutContent"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Expertise</h2>
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="light-bg">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia Laboral</h2>
+            <div class="experience-timeline" id="experienceTimeline"></div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="light-bg">
+        <div class="container">
+            <h2 class="section-title">Blog & Artículos</h2>
+            <div class="blog-grid" id="blogGrid"></div>
+        </div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="blog-modal">
+        <div class="blog-modal-content">
+            <span class="blog-close" onclick="closeBlogModal()">&times;</span>
+            <div id="blogModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimonios</h2>
+            <div class="testimonials-grid" id="testimonialsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="light-bg">
+        <div class="container">
+            <h2 class="section-title">Certificaciones</h2>
+            <div class="certifications-grid" id="certificationsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h2 style="margin-bottom: 1.5rem;">Contacta Conmigo</h2>
+            <div class="footer-links">
+                <a href="" id="footerEmail">Email</a>
+                <a href="" id="footerLinkedin" target="_blank">LinkedIn</a>
+                <a href="" id="footerGithub" target="_blank">GitHub</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-credit">© 2024 Sergio Carvajal. Built with HTML, CSS & JavaScript. Deployed on Cloudflare Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        let data = null;
+
+        // Load data from JSON file
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                data = await response.json();
+                renderSite();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.body.innerHTML = '<div class="loading">Error cargando datos. Por favor recarga la página.</div>';
+            }
+        }
+
+        // Render entire site
+        function renderSite() {
+            renderHero();
+            renderAbout();
+            renderSkills();
+            renderProjects();
+            renderExperience();
+            renderBlog();
+            renderTestimonials();
+            renderCertifications();
+            renderFooter();
+        }
+
+        // Hero Section
+        function renderHero() {
+            document.getElementById('heroName').textContent = data.profile.name;
+            document.getElementById('heroTitle').textContent = data.profile.title;
+            document.getElementById('heroDescription').textContent = data.profile.about.substring(0, 200) + '...';
+            document.getElementById('heroLocation').textContent = data.profile.location;
+            document.getElementById('heroEmail').href = `mailto:${data.profile.email}`;
+            document.getElementById('heroEmail').textContent = `Email`;
+            document.getElementById('heroLinkedin').href = data.profile.linkedin;
+        }
+
+        // About Section
+        function renderAbout() {
+            const content = `
+                <p>${data.profile.about}</p>
+                <p style="margin-top: 2rem;"><strong>Ubicación:</strong> ${data.profile.location}</p>
+                <p><strong>Teléfono:</strong> <a href="tel:${data.profile.phone}">${data.profile.phone}</a></p>
+                <p><strong>Email:</strong> <a href="mailto:${data.profile.email}">${data.profile.email}</a></p>
+            `;
+            document.getElementById('aboutContent').innerHTML = content;
+        }
+
+        // Skills Section
+        function renderSkills() {
+            const skillsGrid = document.getElementById('skillsGrid');
+            skillsGrid.innerHTML = '';
+            
+            Object.entries(data.skills).forEach(([category, skills]) => {
+                const skillCard = document.createElement('div');
+                skillCard.className = 'skill-category';
+                skillCard.innerHTML = `
+                    <h3>${category}</h3>
+                    <ul class="skill-list">
+                        ${skills.map(skill => `<li>${skill}</li>`).join('')}
+                    </ul>
+                `;
+                skillsGrid.appendChild(skillCard);
+            });
+        }
+
+        // Projects Section
+        function renderProjects() {
+            const projectsGrid = document.getElementById('projectsGrid');
+            projectsGrid.innerHTML = '';
+            
+            data.projects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = `project-card ${project.featured ? 'featured' : ''}`;
+                projectCard.innerHTML = `
+                    <span class="project-category">${project.category}</span>
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <div class="tech-tags">
+                        ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    </div>
+                    <div class="achievements">
+                        <h4>Logros Destacados</h4>
+                        <ul>
+                            ${project.achievements.map(achievement => `<li>${achievement}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                projectsGrid.appendChild(projectCard);
+            });
+        }
+
+        // Experience Section
+        function renderExperience() {
+            const timeline = document.getElementById('experienceTimeline');
+            timeline.innerHTML = '';
+            
+            data.experience.forEach(exp => {
+                const expItem = document.createElement('div');
+                expItem.className = 'experience-item';
+                expItem.innerHTML = `
+                    <h3>${exp.role}</h3>
+                    <div class="experience-meta">${exp.company} • ${exp.location}</div>
+                    <div class="experience-period">${exp.startDate} - ${exp.endDate}</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">${exp.description}</p>
+                    <ul class="experience-highlights">
+                        ${exp.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
+                    </ul>
+                `;
+                timeline.appendChild(expItem);
+            });
+        }
+
+        // Blog Section
+        function renderBlog() {
+            const blogGrid = document.getElementById('blogGrid');
+            blogGrid.innerHTML = '';
+            
+            data.blog.forEach(post => {
+                const blogCard = document.createElement('div');
+                blogCard.className = 'blog-card';
+                blogCard.onclick = () => openBlogModal(post);
+                blogCard.innerHTML = `
+                    <div class="blog-date">${formatDate(post.date)}</div>
+                    <span class="blog-category">${post.category}</span>
+                    <h3>${post.title}</h3>
+                    <p>${post.excerpt}</p>
+                    <div class="blog-meta">
+                        <span>Leer artículo →</span>
+                        <span>${post.readTime}</span>
+                    </div>
+                `;
+                blogGrid.appendChild(blogCard);
+            });
+        }
+
+        // Blog Modal
+        function openBlogModal(post) {
+            const modal = document.getElementById('blogModal');
+            const content = document.getElementById('blogModalContent');
+            content.innerHTML = `
+                <div class="blog-date">${formatDate(post.date)}</div>
+                <span class="blog-category">${post.category}</span>
+                <h2>${post.title}</h2>
+                <div class="blog-meta" style="margin-bottom: 2rem;">
+                    <span>${post.readTime}</span>
+                </div>
+                <div style="color: var(--text-secondary); line-height: 1.8;">
+                    ${post.content.split('\n').map(para => `<p>${para}</p>`).join('')}
+                </div>
+            `;
+            modal.style.display = 'block';
+        }
+
+        function closeBlogModal() {
+            document.getElementById('blogModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('blogModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Testimonials Section
+        function renderTestimonials() {
+            const testimonialGrid = document.getElementById('testimonialsGrid');
+            testimonialGrid.innerHTML = '';
+            
+            data.testimonials.forEach(testimonial => {
+                const testCard = document.createElement('div');
+                testCard.className = 'testimonial-card';
+                testCard.innerHTML = `
+                    <p class="testimonial-text">"${testimonial.text}"</p>
+                    <div class="testimonial-author">${testimonial.author}</div>
+                    <div class="testimonial-position">${testimonial.position}</div>
+                    <div class="testimonial-company">${testimonial.company}</div>
+                `;
+                testimonialGrid.appendChild(testCard);
+            });
+        }
+
+        // Certifications Section
+        function renderCertifications() {
+            const certGrid = document.getElementById('certificationsGrid');
+            certGrid.innerHTML = '';
+            
+            data.certifications.forEach(cert => {
+                const certCard = document.createElement('div');
+                certCard.className = 'certification-card';
+                certCard.innerHTML = `
+                    <h3>${cert.name}</h3>
+                    <div class="certification-issuer">${cert.issuer}</div>
+                    <div class="certification-date">${cert.date}</div>
+                `;
+                certGrid.appendChild(certCard);
+            });
+        }
+
+        // Footer
+        function renderFooter() {
+            document.getElementById('footerEmail').href = `mailto:${data.profile.email}`;
+            document.getElementById('footerEmail').textContent = data.profile.email;
+            document.getElementById('footerLinkedin').href = data.profile.linkedin;
+            document.getElementById('footerGithub').href = data.profile.github;
+        }
+
+        // Utility Functions
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString + 'T00:00:00').toLocaleDateString('es-ES', options);
+        }
+
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
