@@ -805,12 +805,35 @@
         // Load data from JSON file
         async function loadData() {
             try {
-                const response = await fetch('data.json');
-                data = await response.json();
-                renderSite();
+                // Try multiple paths for data.json
+                const paths = [
+                    'data.json',
+                    './data.json',
+                    '/data.json',
+                    window.location.pathname + 'data.json'
+                ];
+                
+                let response;
+                let lastError;
+                
+                for (const path of paths) {
+                    try {
+                        response = await fetch(path, { cache: 'no-cache' });
+                        if (response.ok) {
+                            data = await response.json();
+                            renderSite();
+                            console.log('✓ Data loaded from:', path);
+                            return;
+                        }
+                    } catch (e) {
+                        lastError = e;
+                    }
+                }
+                
+                throw lastError || new Error('Could not load data.json from any path');
             } catch (error) {
                 console.error('Error loading data:', error);
-                document.body.innerHTML = '<div class="loading">Error cargando datos. Por favor recarga la página.</div>';
+                document.body.innerHTML = '<div class="loading">⚠️ Error cargando datos. Por favor recarga la página. (Revisa la consola para detalles)</div>';
             }
         }
 
